@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+{% for wishlist_product in wishlist_products %}
+<div>
+    <img src="{{ wishlist_product.product.productimage_set.first.image.url }}" width="100px">
+    <h3>{{ wishlist_product.product.name }}</h3>
+    <a href="{% url 'to_wishlist' wishlist_product.product.slug 'remove' %}">Remove</a>
+</div>
+
+{% endfor %}
+
+{% endblock main %}

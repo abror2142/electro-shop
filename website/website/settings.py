@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -115,6 +116,12 @@ USE_I18N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'abror2142@gmail.com'
+EMAIL_HOST_PASSWORD = 'ysabqbsylqihjuhy'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -131,3 +138,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STRIPE_PUBLIC_KEY = 'pk_test_51PHfFbCvjybftpqhBVOGRgYhTdwGp36aNiXrX87XjlD72hC1AauarVws2OZcBCrRauBSs8Ib8RX164C50SIYm91600hYwb9pfu'
+STRIPE_SECRET_KEY = 'sk_test_51PHfFbCvjybftpqhyXrmswouq0m0ihpAWjf8gO5OoK2Hasvb57Dqr4lkL8yrbZ3SGpbeud7EKFKocxCr3Br4fzan00nV503XQK'
